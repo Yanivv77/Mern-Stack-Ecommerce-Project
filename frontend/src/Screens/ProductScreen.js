@@ -18,7 +18,7 @@ const ProductScreen = ({ match }) => {
     }
 
     fetch()
-  }, [match.params.id])
+  }, [match])
   const [qty, setQty] = useState(1)
   const productDetails = useSelector((state) => state.productDetails)
   const { loading, error } = productDetails
