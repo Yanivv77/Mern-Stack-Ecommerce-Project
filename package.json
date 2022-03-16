@@ -1,0 +1,25 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "Mern Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yanivv77/Mern-Stack-Ecommerce-Project.git"
+  },
+  "author": "Yaniv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yanivv77/Mern-Stack-Ecommerce-Project/issues"
+  },
+  "homepage": "https://github.com/Yanivv77/Mern-Stack-Ecommerce-Project#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
