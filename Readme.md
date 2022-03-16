@@ -8,10 +8,10 @@ cd frontend
 npm install
 ```
 
-### Run
+### Run frontend port 3000 and backend port 5000
 
 ```
-# Run frontend port 3000 and backend port 5000)
+
 npm run dev
 
 ```
