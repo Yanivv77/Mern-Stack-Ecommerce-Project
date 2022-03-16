@@ -19,19 +19,9 @@ const ProductScreen = ({ match }) => {
 
     fetch()
   }, [match.params.id])
-
   const [qty, setQty] = useState(1)
-  const [rating, setRating] = useState(0)
-  const [comment, setComment] = useState('')
-
   const productDetails = useSelector((state) => state.productDetails)
   const { loading, error } = productDetails
-
-  const userLogin = useSelector((state) => state.userLogin)
-  const { userInfo } = userLogin
-
-  const productReviewCreate = useSelector((state) => state.productReviewCreate)
-  const { success: successProductReview, loading: loadingProductReview, error: errorProductReview } = productReviewCreate
 
   return (
     <>
