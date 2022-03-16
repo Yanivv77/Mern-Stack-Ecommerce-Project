@@ -1,13 +1,18 @@
 # Usage
 
-### Install dependencies
+### Install Dependencies (frontend & backend)
 
-```bash
+```
+npm install
+cd frontend
 npm install
 ```
 
 ### Run
 
-```bash
-npm run dev
 ```
+# Run frontend (:3000) & backend (:5000)
+npm run dev
+
+```
+
