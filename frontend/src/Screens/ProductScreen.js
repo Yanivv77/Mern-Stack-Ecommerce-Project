@@ -88,7 +88,6 @@ const ProductScreen = ({ match }) => {
           </Col>
         </Row>
       </>
-      )}
     </>
   )
 }
