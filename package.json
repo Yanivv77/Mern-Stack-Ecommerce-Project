@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Mern Project",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
@@ -20,6 +21,8 @@
   },
   "homepage": "https://github.com/Yanivv77/Mern-Stack-Ecommerce-Project#readme",
   "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3"
   }
 }
