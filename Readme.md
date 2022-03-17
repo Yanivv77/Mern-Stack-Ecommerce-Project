@@ -1,5 +1,18 @@
 # Usage
 
+### Env Variables
+
+Change .envExample file to .env 
+In File to your mongodb uri
+
+
+```
+npm install
+cd frontend
+npm install
+```
+
+
 ### Install Dependencies (frontend & backend)
 
 ```
@@ -16,3 +29,9 @@ npm run dev
 
 ```
 
+
+# Import data
+
+```
+npm run data:import
+```
