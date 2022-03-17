@@ -3,13 +3,12 @@
 ### Env Variables
 
 Change .envExample file to .env 
-In File to your mongodb uri
+In File change to your mongodb uri
 
+Or use my cloud database
 
 ```
-npm install
-cd frontend
-npm install
+mongodb+srv://admin:password@yanivecommercecluster.x1kvw.mongodb.net/proshop?retryWrites=true&w=majority
 ```
 
 
