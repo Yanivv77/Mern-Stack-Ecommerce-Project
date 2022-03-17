@@ -30,7 +30,7 @@ npm run dev
 ```
 
 
-# Import data
+### Import data to your database
 
 ```
 npm run data:import
