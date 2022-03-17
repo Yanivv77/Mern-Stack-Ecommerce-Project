@@ -9,7 +9,7 @@ In File change to your mongodb uri
 Or use my cloud database
 
 ```
-mongodb+srv://admin:password@yanivecommercecluster.x1kvw.mongodb.net/proshop?retryWrites=true&w=majority
+mongodb+srv://yaniv:yaniv@yanivecommercecluster.x1kvw.mongodb.net/proshop?retryWrites=true&w=majority
 ```
 
 
