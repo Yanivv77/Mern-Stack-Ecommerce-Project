@@ -28,3 +28,7 @@ npm run dev
 ```
 npm run data:import
 ```
+
+```
+https://yanivproshop.herokuapp.com/
+```
