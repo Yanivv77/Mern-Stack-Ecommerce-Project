@@ -1,6 +1,6 @@
 
 ### heroku link
-https://yanivproshop.herokuapp.com/
+https://yanivmernshop.herokuapp.com/
 
 
 # Usage
