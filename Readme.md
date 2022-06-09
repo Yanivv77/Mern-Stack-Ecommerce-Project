@@ -38,13 +38,13 @@ npm run data:import
 ### Sample User Logins
 
 ```
-admin@example.com (Admin)
+yaniv@gmail.com (Admin)
 123456
 
-john@example.com (Customer)
+moshe@gmail.com (Customer)
 123456
 
-jane@example.com (Customer)
+avi@gmail.com (Customer)
 123456
 ```
 
