@@ -1,3 +1,8 @@
+
+### heroku link
+https://yanivproshop.herokuapp.com/
+
+
 # Usage
 
 ### Env Variables
@@ -29,6 +34,19 @@ npm run dev
 npm run data:import
 ```
 
-### heroku link
-https://yanivproshop.herokuapp.com/
+
+### Sample User Logins
+
+```
+admin@example.com (Admin)
+123456
+
+john@example.com (Customer)
+123456
+
+jane@example.com (Customer)
+123456
+```
+
+
 
