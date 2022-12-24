@@ -1,11 +1,11 @@
 {
-  "name": "YanivShop",
+  "name": "yanivshop",
   "version": "1.0.0",
   "description": "Mern Project",
   "main": "server.js",
   "type": "module",
   "engines": {
-    "node": "17.3.0"
+    "node": "v18.12.1"
   },
   "scripts": {
     "start": "ts-node src/config/server.ts",
