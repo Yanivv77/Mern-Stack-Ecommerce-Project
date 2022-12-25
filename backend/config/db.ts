@@ -1,16 +1,16 @@
 import mongoose, { AnyKeys } from 'mongoose'
-import {cyan, red } from 'colors'
+import colors from '@colors/colors/safe'
+
 mongoose.set('strictQuery', true);
 const connectDB = async (): Promise<void> => {
   try {
     if (process.env.MONGO_URI) {
     const conn = await mongoose.connect(process.env.MONGO_URI)
-    console.log(`MongoDB Connected: ${conn.connection.host}`.cyan)
-    mongoose.set('strictQuery', true);
+    console.log(colors.green(`MongoDB Connected: ${conn.connection.host}`))
   }
   } catch (error) {
     if (error instanceof Error) {
-    console.error(`Error: ${error.message}`.red.underline.bold)
+    console.error(colors.red(`Error: ${error.message}`))
     process.exit(1)
   }}
 }
