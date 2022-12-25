@@ -1,18 +1,18 @@
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import colors from 'colors'
-import users from './data/users.js'
-import products from './data/products.js'
-import User from './models/userModel.js'
-import Product from './models/productModel.js'
-import Order from './models/orderModel.js'
-import connectDB from './config/db.js'
+import users from './data/users'
+import products from './data/products'
+import {User,IUser} from './models/userModel'
+import {Product, IProduct} from './models/productModel'
+import {Order, IOrder} from './models/orderModel'
+import connectDB from './config/db'
 
 dotenv.config()
 
 connectDB()
 
-const importData = async () => {
+const importData = async (): Promise<void> => {
   try {
     await Order.deleteMany()
     await Product.deleteMany()
@@ -22,7 +22,10 @@ const importData = async () => {
 
     const adminUser = createdUsers[0]._id
 
-    const sampleProducts = products.map((product) => {
+
+    
+
+    const sampleProducts = products.map((product : IProduct) => {
       return { ...product, user: adminUser }
     })
 
@@ -36,7 +39,7 @@ const importData = async () => {
   }
 }
 
-const destroyData = async () => {
+const destroyData = async (): Promise<void> => {
   try {
     await Order.deleteMany()
     await Product.deleteMany()

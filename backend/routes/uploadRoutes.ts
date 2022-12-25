@@ -4,10 +4,10 @@ import multer from 'multer'
 const router = express.Router()
 
 const storage = multer.diskStorage({
-  destination(req, file, cb) {
+  destination(req: express.Request, file: Express.Multer.File, cb: any) {
     cb(null, 'uploads/')
   },
-  filename(req, file, cb) {
+  filename(req: express.Request, file: Express.Multer.File, cb: any) {
     cb(
       null,
       `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`
@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
   },
 })
 
-function checkFileType(file, cb) {
+function checkFileType(file: Express.Multer.File, cb: any) {
   const filetypes = /jpg|jpeg|png/
   const extname = filetypes.test(path.extname(file.originalname).toLowerCase())
   const mimetype = filetypes.test(file.mimetype)
@@ -29,13 +29,21 @@ function checkFileType(file, cb) {
 
 const upload = multer({
   storage,
-  fileFilter: function (req, file, cb) {
+  fileFilter: function (req: express.Request, file: Express.Multer.File, cb: any) {
     checkFileType(file, cb)
   },
 })
 
-router.post('/', upload.single('image'), (req, res) => {
-  res.send(`/${req.file.path}`)
-})
+router.post(
+  '/',
+  upload.single('image'),
+  (req: express.Request, res: express.Response) => {
+    if (req.file) {
+      res.send(`/${req.file.path}`)
+    } else {
+      res.send('No file was uploaded')
+    }
+  }
+)
 
 export default router

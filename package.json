@@ -3,18 +3,18 @@
   "version": "1.0.0",
   "description": "Mern Project",
   "main": "server.js",
-  "type": "module",
   "engines": {
     "node": "v18.12.1"
   },
   "scripts": {
-    "start": "ts-node src/config/server.ts",
-    "server": "nodemon backend/server",
+    "start": "ts-node src/config/server.js",
+    "server": "ts-node backend/server",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d",
     "test": "",
+    "tsc": "tsc",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "repository": {
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/Yanivv77/Mern-Stack-Ecommerce-Project#readme",
   "dependencies": {
+    "@colors/colors": "^1.5.0",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "concurrently": "^7.0.0",
@@ -42,6 +43,14 @@
     "nodemon": "^2.0.20"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.15",
+    "@types/jsonwebtoken": "^9.0.0",
+    "@types/morgan": "^1.9.3",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^18.11.17",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.1",
     "typescript": "^4.9.4"
   }
 }
