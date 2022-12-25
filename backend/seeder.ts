@@ -3,9 +3,9 @@ import dotenv from 'dotenv'
 import colors from 'colors'
 import users from './data/users'
 import products from './data/products'
-import User from './models/userModel'
-import Product from './models/productModel'
-import Order from './models/orderModel'
+import {User,IUser} from './models/userModel'
+import {Product, IProduct} from './models/productModel'
+import {Order, IOrder} from './models/orderModel'
 import connectDB from './config/db'
 
 dotenv.config()
@@ -23,15 +23,9 @@ const importData = async (): Promise<void> => {
     const adminUser = createdUsers[0]._id
 
 
-    interface Product {
-      name: string
-      price: number
-      image: string
-      description: string
-      user: mongoose.Types.ObjectId
-    }
+    
 
-    const sampleProducts = products.map((product : Product) => {
+    const sampleProducts = products.map((product : IProduct) => {
       return { ...product, user: adminUser }
     })
 

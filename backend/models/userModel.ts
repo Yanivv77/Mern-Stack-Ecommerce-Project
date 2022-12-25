@@ -1,21 +1,34 @@
-import * as mongoose from 'mongoose';
+import mongoose from 'mongoose'
 import bcrypt from 'bcryptjs'
+
+export interface IUser extends mongoose.Document {
+  name: string
+  email: string
+  password: string
+  isAdmin: boolean
+  matchPassword: (enteredPassword: string) => Promise<boolean>
+  _id: string
+}
 
 const userSchema = new mongoose.Schema(
   {
     name: {
       type: String,
       required: true,
+      trim: true,
     },
     email: {
       type: String,
       required: true,
+      trim: true,
+      lowercase: true,
       unique: true,
     },
     password: {
       type: String,
       required: true,
-    },
+      minlength: 4,
+      },
     isAdmin: {
       type: Boolean,
       required: true,
@@ -25,13 +38,15 @@ const userSchema = new mongoose.Schema(
   {
     timestamps: true,
   }
-) as mongoose.Schema<User>;
+)
 
-userSchema.methods.matchPassword = async function (this: User, enteredPassword: string) {
+userSchema.methods.matchPassword = async function (
+  enteredPassword: string
+): Promise<boolean> {
   return await bcrypt.compare(enteredPassword, this.password)
 }
 
-userSchema.pre('save', async function (this: User, next: mongoose.HookNextFunction) {
+userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) {
     next()
   }
@@ -40,13 +55,6 @@ userSchema.pre('save', async function (this: User, next: mongoose.HookNextFuncti
   this.password = await bcrypt.hash(this.password, salt)
 })
 
-const User = mongoose.model('User', userSchema)
+export const User = mongoose.model<IUser>('User', userSchema)
 
-export interface User {
-  name: string;
-  email: string;
-  password: string;
-  isAdmin: boolean;
-}
 
-export default User

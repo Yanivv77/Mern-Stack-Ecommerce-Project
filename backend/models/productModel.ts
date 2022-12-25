@@ -1,5 +1,32 @@
 import mongoose from 'mongoose'
 
+export interface IReview {
+  name: string
+  rating: number
+  comment: string
+  user: string
+  createdAt: Date
+  updatedAt: Date
+  }
+
+
+export interface IProduct {
+  user: string
+  name: string
+  image: string
+  brand: string
+  category: string
+  description: string
+  reviews: IReview[]
+  rating: number
+  numReviews: number
+  price: number
+  countInStock: number
+  createdAt: Date
+  updatedAt: Date
+  }
+
+
 const reviewSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
@@ -70,6 +97,5 @@ const productSchema = new mongoose.Schema(
   }
 )
 
-const Product = mongoose.model('Product', productSchema)
+export const Product = mongoose.model<IProduct>('Product', productSchema)
 
-export default Product

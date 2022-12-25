@@ -1,18 +1,16 @@
 import asyncHandler from 'express-async-handler'
-import generateToken from '../utils/generateToken.js'
-import User {User} from '../models/userModel.js'
+import generateToken from '../utils/generateToken'
+import {User, IUser} from '../models/userModel'
 import { Request, Response } from 'express'
-import mongoose from 'mongoose'
-
 
 
 // @desc    Auth user & get token
 // @route   POST /api/users/login
 // @access  Public
-const authUser = asyncHandler(async (req:any, res) => {
-  const { email, password } = req.body
+const authUser = asyncHandler(async (req: Request, res: Response) => {
+  const { email, password }: { email: string; password: string } = req.body
 
-  const user = await User.findOne({ email }) as mongoose.Document<User>;
+  const user = await User.findOne({ email }) as IUser
 
   if (user && (await user.matchPassword(password))) {
     res.json({
@@ -20,7 +18,7 @@ const authUser = asyncHandler(async (req:any, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
-      token: generateToken(user._id.toString()),
+      token: generateToken(user._id),
     })
   } else {
     res.status(401)
@@ -31,10 +29,10 @@ const authUser = asyncHandler(async (req:any, res) => {
 // @desc    Register a new user
 // @route   POST /api/users
 // @access  Public
-const registerUser = asyncHandler(async (req, res) => {
-  const { name, email, password } = req.body
-
-  const userExists = await User.findOne({ email })
+const registerUser = asyncHandler(async (req: Request, res: Response) => {
+  const { name, email, password }: {name: string, email: string, password: string } = req.body
+ 
+  const userExists = await User.findOne({ email }) as IUser
 
   if (userExists) {
     res.status(400)
@@ -53,7 +51,7 @@ const registerUser = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
-      token: generateToken(user._id.toString()),
+      token: generateToken(user._id),
     })
   } else {
     res.status(400)
@@ -64,8 +62,9 @@ const registerUser = asyncHandler(async (req, res) => {
 // @desc    Get user profile
 // @route   GET /api/users/profile
 // @access  Private
-const getUserProfile = asyncHandler(async (req: Request & { user: any }, res: Response) => {
-  const user = await User.findById(req.user._id) as mongoose.Document<User>;
+const getUserProfile = asyncHandler(async (req: any, res: Response) => {
+
+  const user = await User.findById(req.user._id) as IUser  
 
   if (user) {
     res.json({
@@ -83,8 +82,9 @@ const getUserProfile = asyncHandler(async (req: Request & { user: any }, res: Re
 // @desc    Update user profile
 // @route   PUT /api/users/profile
 // @access  Private
-const updateUserProfile = asyncHandler(async (req: Request & { user: any }, res: Response) => {
-  const user = await User.findById(req.user._id) as mongoose.Document<User>;
+const updateUserProfile = asyncHandler(async (req: any, res: Response) => {
+  const user = await User.findById(req.user._id) as IUser
+
   if (user) {
     user.name = req.body.name || user.name
     user.email = req.body.email || user.email
@@ -92,13 +92,14 @@ const updateUserProfile = asyncHandler(async (req: Request & { user: any }, res:
       user.password = req.body.password
     }
 
-    const updatedUser = await user.save() as mongoose.Document<User>;
+    const updatedUser = await user.save()
+
     res.json({
       _id: updatedUser._id,
       name: updatedUser.name,
       email: updatedUser.email,
       isAdmin: updatedUser.isAdmin,
-      token: generateToken(updatedUser._id.toString()),
+      token: generateToken(updatedUser._id),
     })
   } else {
     res.status(404)
@@ -109,7 +110,7 @@ const updateUserProfile = asyncHandler(async (req: Request & { user: any }, res:
 // @desc    Get all users
 // @route   GET /api/users
 // @access  Private/Admin
-const getUsers = asyncHandler(async (req, res) => {
+const getUsers = asyncHandler(async (req: Request, res: Response) => {
   const users = await User.find({})
   res.json(users)
 })
@@ -117,8 +118,8 @@ const getUsers = asyncHandler(async (req, res) => {
 // @desc    Delete user
 // @route   DELETE /api/users/:id
 // @access  Private/Admin
-const deleteUser = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.params.id)
+const deleteUser = asyncHandler(async (req: Request, res: Response) => {
+  const user = await User.findById(req.params.id) as IUser
 
   if (user) {
     await user.remove()
@@ -132,7 +133,7 @@ const deleteUser = asyncHandler(async (req, res) => {
 // @desc    Get user by ID
 // @route   GET /api/users/:id
 // @access  Private/Admin
-const getUserById = asyncHandler(async (req, res) => {
+const getUserById = asyncHandler(async (req: Request, res: Response) => {
   const user = await User.findById(req.params.id).select('-password')
 
   if (user) {
@@ -147,8 +148,8 @@ const getUserById = asyncHandler(async (req, res) => {
 // @route   PUT /api/users/:id
 // @access  Private/Admin
 
-const updateUser = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.params.id)
+const updateUser = asyncHandler(async (req: Request, res: Response) => {
+  const user = await User.findById(req.params.id) as IUser
 
   if (user) {
     user.name = req.body.name || user.name

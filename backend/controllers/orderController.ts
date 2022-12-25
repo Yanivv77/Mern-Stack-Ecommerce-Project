@@ -1,11 +1,11 @@
 import asyncHandler from 'express-async-handler'
-import Order from '../models/orderModel.js'
-import { Response } from 'express';
+import {Order} from '../models/orderModel'
+import { Request, Response } from 'express'
 
 // @desc    Create new order
 // @route   POST /api/orders
 // @access  Private
-const addOrderItems = asyncHandler(async (req:any, res:Response) => {
+const addOrderItems = asyncHandler(async (req: any, res: Response) => {
   const { orderItems, shippingAddress, paymentMethod, itemsPrice, taxPrice, shippingPrice, totalPrice } = req.body
 
   if (orderItems && orderItems.length === 0) {
@@ -33,7 +33,7 @@ const addOrderItems = asyncHandler(async (req:any, res:Response) => {
 // @desc    Get order by ID
 // @route   GET /api/orders/:id
 // @access  Private
-const getOrderById = asyncHandler(async (req:any, res:Response) => {
+const getOrderById = asyncHandler(async (req: Request, res: Response) => {
   const order = await Order.findById(req.params.id).populate('user', 'name email')
 
   if (order) {
@@ -47,12 +47,12 @@ const getOrderById = asyncHandler(async (req:any, res:Response) => {
 // @desc    Update order to paid
 // @route   GET /api/orders/:id/pay
 // @access  Private
-const updateOrderToPaid = asyncHandler(async (req:any, res:Response) => {
+const updateOrderToPaid = asyncHandler(async (req: Request, res: Response) => {
   const order = await Order.findById(req.params.id)
 
   if (order) {
     order.isPaid = true
-    order.paidAt = new Date()
+    order.paidAt = new Date(Date.now())
     order.paymentResult = {
       id: req.body.id,
       status: req.body.status,
@@ -72,12 +72,12 @@ const updateOrderToPaid = asyncHandler(async (req:any, res:Response) => {
 // @desc    Update order to delivered
 // @route   GET /api/orders/:id/deliver
 // @access  Private/Admin
-const updateOrderToDelivered = asyncHandler(async (req:any, res:Response) => {
+const updateOrderToDelivered = asyncHandler(async (req: Request, res: Response) => {
   const order = await Order.findById(req.params.id)
 
   if (order) {
     order.isDelivered = true
-    order.deliveredAt = new Date()
+    order.deliveredAt = new Date(Date.now())
 
     const updatedOrder = await order.save()
 
@@ -91,7 +91,7 @@ const updateOrderToDelivered = asyncHandler(async (req:any, res:Response) => {
 // @desc    Get logged in user orders
 // @route   GET /api/orders/myorders
 // @access  Private
-const getMyOrders = asyncHandler(async (req:any, res:Response) => {
+const getMyOrders = asyncHandler(async (req: any, res: Response) => {
   const orders = await Order.find({ user: req.user._id })
   res.json(orders)
 })
@@ -100,7 +100,7 @@ const getMyOrders = asyncHandler(async (req:any, res:Response) => {
 // @route   GET /api/orders
 // @access  Private/Admin
 
-const getOrders = asyncHandler(async (req:any, res:Response) => {
+const getOrders = asyncHandler(async (req: Request, res: Response) => {
   const orders = await Order.find({}).populate('user', 'id name')
   res.json(orders)
 })
