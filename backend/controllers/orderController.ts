@@ -11,7 +11,7 @@ const addOrderItems = asyncHandler(async (req:any, res:Response) => {
   if (orderItems && orderItems.length === 0) {
     res.status(400)
     throw new Error('No order items')
-    return
+    
   } else {
     const order = new Order({
       orderItems,
@@ -52,7 +52,7 @@ const updateOrderToPaid = asyncHandler(async (req:any, res:Response) => {
 
   if (order) {
     order.isPaid = true
-    order.paidAt = Date.now()
+    order.paidAt = new Date()
     order.paymentResult = {
       id: req.body.id,
       status: req.body.status,
@@ -77,7 +77,7 @@ const updateOrderToDelivered = asyncHandler(async (req:any, res:Response) => {
 
   if (order) {
     order.isDelivered = true
-    order.deliveredAt = Date.now()
+    order.deliveredAt = new Date()
 
     const updatedOrder = await order.save()
 

@@ -1,6 +1,10 @@
 import asyncHandler from 'express-async-handler'
 import generateToken from '../utils/generateToken.js'
-import User from '../models/userModel.js'
+import User {User} from '../models/userModel.js'
+import { Request, Response } from 'express'
+import mongoose from 'mongoose'
+
+
 
 // @desc    Auth user & get token
 // @route   POST /api/users/login
@@ -8,7 +12,7 @@ import User from '../models/userModel.js'
 const authUser = asyncHandler(async (req:any, res) => {
   const { email, password } = req.body
 
-  const user = await User.findOne({ email })
+  const user = await User.findOne({ email }) as mongoose.Document<User>;
 
   if (user && (await user.matchPassword(password))) {
     res.json({
@@ -16,7 +20,7 @@ const authUser = asyncHandler(async (req:any, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
-      token: generateToken(user._id),
+      token: generateToken(user._id.toString()),
     })
   } else {
     res.status(401)
@@ -49,7 +53,7 @@ const registerUser = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
-      token: generateToken(user._id),
+      token: generateToken(user._id.toString()),
     })
   } else {
     res.status(400)
@@ -60,8 +64,8 @@ const registerUser = asyncHandler(async (req, res) => {
 // @desc    Get user profile
 // @route   GET /api/users/profile
 // @access  Private
-const getUserProfile = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id)
+const getUserProfile = asyncHandler(async (req: Request & { user: any }, res: Response) => {
+  const user = await User.findById(req.user._id) as mongoose.Document<User>;
 
   if (user) {
     res.json({
@@ -79,9 +83,8 @@ const getUserProfile = asyncHandler(async (req, res) => {
 // @desc    Update user profile
 // @route   PUT /api/users/profile
 // @access  Private
-const updateUserProfile = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id)
-
+const updateUserProfile = asyncHandler(async (req: Request & { user: any }, res: Response) => {
+  const user = await User.findById(req.user._id) as mongoose.Document<User>;
   if (user) {
     user.name = req.body.name || user.name
     user.email = req.body.email || user.email
@@ -89,14 +92,13 @@ const updateUserProfile = asyncHandler(async (req, res) => {
       user.password = req.body.password
     }
 
-    const updatedUser = await user.save()
-
+    const updatedUser = await user.save() as mongoose.Document<User>;
     res.json({
       _id: updatedUser._id,
       name: updatedUser.name,
       email: updatedUser.email,
       isAdmin: updatedUser.isAdmin,
-      token: generateToken(updatedUser._id),
+      token: generateToken(updatedUser._id.toString()),
     })
   } else {
     res.status(404)

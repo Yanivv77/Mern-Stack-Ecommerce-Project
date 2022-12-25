@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import * as mongoose from 'mongoose';
 import bcrypt from 'bcryptjs'
 
 const userSchema = new mongoose.Schema(
@@ -21,18 +21,17 @@ const userSchema = new mongoose.Schema(
       required: true,
       default: false,
     },
-    
   },
   {
     timestamps: true,
   }
-)
+) as mongoose.Schema<User>;
 
-userSchema.methods.matchPassword = async function (enteredPassword) {
+userSchema.methods.matchPassword = async function (this: User, enteredPassword: string) {
   return await bcrypt.compare(enteredPassword, this.password)
 }
 
-userSchema.pre('save', async function (next) {
+userSchema.pre('save', async function (this: User, next: mongoose.HookNextFunction) {
   if (!this.isModified('password')) {
     next()
   }
@@ -42,5 +41,12 @@ userSchema.pre('save', async function (next) {
 })
 
 const User = mongoose.model('User', userSchema)
+
+export interface User {
+  name: string;
+  email: string;
+  password: string;
+  isAdmin: boolean;
+}
 
 export default User
