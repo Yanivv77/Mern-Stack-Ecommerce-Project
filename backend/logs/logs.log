@@ -1,0 +1,19 @@
+2022-12-25T20:06:26.651Z info: Server started - undefined
+2022-12-25T20:06:27.989Z info: Connected to MongoDb - undefined
+2022-12-25T20:16:00.793Z info: Server started - undefined
+2022-12-25T20:16:02.122Z info: Connected to MongoDb - undefined
+2022-12-25T20:19:08.274Z info: Server started - undefined
+2022-12-25T20:19:09.831Z info: (0 , logger_1.logger) is not a function - TypeError: (0 , logger_1.logger) is not a function
+    at C:\Users\yaniv\OneDrive\Desktop\MyProjects\Mern-Stack-Ecommerce-Project\backend\config\db.ts:15:11
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\yaniv\OneDrive\Desktop\MyProjects\Mern-Stack-Ecommerce-Project\backend\config\db.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2022-12-25T20:20:18.438Z info: Server started - undefined
+2022-12-25T20:20:19.871Z info: Connected to MongoDb - undefined
+2022-12-25T20:21:27.717Z info: Server started - undefined
+2022-12-25T20:21:29.173Z info: Connected to MongoDb - undefined
+2022-12-25T20:22:15.802Z info: Server started  
+2022-12-25T20:22:17.213Z info: Connected to MongoDb  
+2022-12-25T20:25:20.508Z info: Server started  
+2022-12-25T20:25:22.049Z info: Connected to MongoDb  
+2022-12-25T20:25:47.868Z info: Moshe cohen has logged in  

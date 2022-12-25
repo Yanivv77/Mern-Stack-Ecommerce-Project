@@ -2,6 +2,7 @@ import asyncHandler from 'express-async-handler'
 import generateToken from '../utils/generateToken'
 import {User, IUser} from '../models/userModel'
 import { Request, Response } from 'express'
+import { logger } from '../logs/logger'
 
 
 // @desc    Auth user & get token
@@ -12,7 +13,9 @@ const authUser = asyncHandler(async (req: Request, res: Response) => {
 
   const user = await User.findOne({ email }) as IUser
 
-  if (user && (await user.matchPassword(password))) {
+  if (user && (await user.matchPassword(password))) 
+  {
+    logger.info(`${user.name} has logged in`);
     res.json({
       _id: user._id,
       name: user.name,

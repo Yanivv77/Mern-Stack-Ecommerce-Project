@@ -9,7 +9,9 @@ import userRoutes from './routes/userRoutes'
 import orderRoutes from './routes/orderRoutes'
 import uploadRoutes from './routes/uploadRoutes'
 import colors from '@colors/colors/safe'
+import { logger } from "./logs/logger";
 dotenv.config()
+
 
 connectDB()
 
@@ -51,6 +53,7 @@ app.use(errorHandler)
 const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () => {
+  logger.info("Server started");
   console.log(colors.blue(
     `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`
     ))
