@@ -21,7 +21,7 @@ const customFormat = winston.format.combine(
     format: customFormat,
     transports: [
       new winston.transports.MongoDB({
-        db: process.env.MONGO_URI,
+        db: "mongodb+srv://yaniv:yaniv@yanivecommercecluster.x1kvw.mongodb.net/?retryWrites=true&w=majority",
         collection: 'logs',
       }),
       new winston.transports.File({
@@ -35,3 +35,21 @@ const customFormat = winston.format.combine(
 
 
 export { logger }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
