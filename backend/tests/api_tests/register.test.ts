@@ -37,3 +37,5 @@ describe('POST /api/users', () => {
     expect(res.status).toBe(500);
     expect(res.body.message).toBe('User validation failed: name: Path `name` is required.');
   });
+  
+  export { app };

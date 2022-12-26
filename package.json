@@ -13,7 +13,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d",
-    "test": "jest --forceExit --detectOpenHandles  --watchAll --maxWorkers=1",
+    "test": "jest --watchAll --verbose  --maxWorkers=1",
     "tsc": "tsc",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },

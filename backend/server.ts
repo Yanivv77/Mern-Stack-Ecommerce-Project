@@ -15,7 +15,7 @@ dotenv.config()
 
 connectDB()
 
-const app = express()
+export const app = express()
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
@@ -50,14 +50,15 @@ if (process.env.NODE_ENV === 'production') {
 app.use(notFound)
 app.use(errorHandler)
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000
 
-const server = app.listen(PORT, () => {
+if (process.env.NODE_ENV !== 'test'){
+
+ app.listen(PORT, () => {
   logger.info(`Server running on port ${PORT}`);
-});
+  console.log(colors.blue(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));
+}); 
 
-server.on('error', (error) => {
-  logger.error(`Error starting server: ${error.message}`);
-});
+}
 
 export default app
