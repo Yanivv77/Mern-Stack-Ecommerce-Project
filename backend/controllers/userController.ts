@@ -15,7 +15,7 @@ const authUser = asyncHandler(async (req: Request, res: Response) => {
 
   if (user && (await user.matchPassword(password))) 
   {
-    logger.info(`${user.name} has logged in`);
+    //logger.info(`${user.name} has logged in`);
     res.json({
       _id: user._id,
       name: user.name,
