@@ -16,7 +16,6 @@ jobs:
         
 
     steps:
-    - uses: actions/setup-dotenv@v1
     - name: Git checkout
       uses: actions/checkout@v3
       
