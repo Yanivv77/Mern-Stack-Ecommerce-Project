@@ -1,6 +1,6 @@
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
-import  app  from '../server';
+import  app  from './server';
 import request from 'supertest';
 
 
@@ -10,6 +10,7 @@ declare global {
 
 let mongo: any;
 beforeAll(async () => {
+  jest.setTimeout(10000)
   mongo = await MongoMemoryServer.create();
 
   process.env.JWT_KEY = 'a2sd2fj';
@@ -20,6 +21,7 @@ beforeAll(async () => {
 });
 
 beforeEach(async () => {
+  jest.setTimeout(10000)
   const collections = await mongoose.connection.db.collections();
 
   for (let collection of collections) {
