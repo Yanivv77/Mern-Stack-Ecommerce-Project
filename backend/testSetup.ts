@@ -4,13 +4,13 @@ import  app  from './server';
 import request from 'supertest';
 
 
-declare global {
-  var login: () => Promise<string[]>;
-}
+// declare global {
+//   var login: () => Promise<string[]>;
+// }
 
 let mongo: any;
 beforeAll(async () => {
-  jest.setTimeout(10000)
+  jest.setTimeout(20000)
   mongo = await MongoMemoryServer.create();
 
   process.env.JWT_KEY = 'a2sd2fj';
@@ -21,7 +21,7 @@ beforeAll(async () => {
 });
 
 beforeEach(async () => {
-  jest.setTimeout(10000)
+  jest.setTimeout(20000)
   const collections = await mongoose.connection.db.collections();
 
   for (let collection of collections) {
@@ -36,23 +36,23 @@ afterAll(async () => {
 });
 
 
-global.login = async () => {
-  const username = 'test';
-  const email = 'test@test.com';
-  const password = 'password';
-  const age = 14;
+// global.login = async () => {
+//   const username = 'test';
+//   const email = 'test@test.com';
+//   const password = 'password';
+//   const age = 14;
 
-  const response = await request(app)
-    .post('/api/users/signup')
-    .send({
-      username,
-      email,
-      password,
-      age
-    })
-    .expect(201);
+//   const response = await request(app)
+//     .post('/api/users/signup')
+//     .send({
+//       username,
+//       email,
+//       password,
+//       age
+//     })
+//     .expect(201);
 
-  const cookie = response.get('Set-Cookie');
+//   const cookie = response.get('Set-Cookie');
 
-  return cookie;
-}
+//   return cookie;
+// }

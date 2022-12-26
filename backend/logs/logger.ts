@@ -3,7 +3,7 @@ var winston = require('winston');
 require('winston-mongodb');
 import dotenv from 'dotenv'
 dotenv.config()
-const url = process.env.MONGO_URI
+
 
 
 const customFormat = winston.format.combine(
@@ -21,7 +21,7 @@ const customFormat = winston.format.combine(
     format: customFormat,
     transports: [
       new winston.transports.MongoDB({
-        db: url,
+        db: process.env.MONGO_URI,
         collection: 'logs',
       }),
       new winston.transports.File({
