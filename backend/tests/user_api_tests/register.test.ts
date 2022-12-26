@@ -17,7 +17,7 @@ describe('POST /api/users', () => {
 
     await User.deleteOne({ _id: res.body._id });
     
-  });
+  },20000);
 });
 
   it('returns a 400 on email already in use', async () => {
@@ -27,7 +27,7 @@ describe('POST /api/users', () => {
 
     
     expect(res.body.message).toBe('User already exists');
-  });
+  },20000);
 
   it('returns a 500 on invalid user data', async () => {
     const res = await request(app)
@@ -36,6 +36,6 @@ describe('POST /api/users', () => {
 
     expect(res.status).toBe(500);
     expect(res.body.message).toBe('User validation failed: name: Path `name` is required.');
-  });
+  },20000);
   
   export { app };

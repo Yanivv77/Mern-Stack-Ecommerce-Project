@@ -11,7 +11,7 @@ describe('POST /api/users/login', () => {
   
       expect(res.status).toBe(200);
       expect(res.body).toHaveProperty('token');
-    });
+    },20000);
   
     it('returns a 401 on invalid email', async () => {
       const res = await request(app)
@@ -20,7 +20,7 @@ describe('POST /api/users/login', () => {
   
       expect(res.status).toBe(401);
       expect(res.body.message).toBe('Invalid email or password');
-    });
+    },20000);
   
     it('returns a 401 on invalid password', async () => {
       const res = await request(app)
@@ -29,7 +29,7 @@ describe('POST /api/users/login', () => {
   
       expect(res.status).toBe(401);
       expect(res.body.message).toBe('Invalid email or password');
-    });
+    },20000);
   });
 
 

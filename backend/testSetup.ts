@@ -10,7 +10,8 @@ import request from 'supertest';
 
 let mongo: any;
 beforeAll(async () => {
-  jest.setTimeout(20000)
+  jest.setTimeout(30000)
+  
   mongo = await MongoMemoryServer.create();
 
   process.env.JWT_KEY = 'a2sd2fj';
@@ -21,7 +22,7 @@ beforeAll(async () => {
 });
 
 beforeEach(async () => {
-  jest.setTimeout(20000)
+  jest.useRealTimers();
   const collections = await mongoose.connection.db.collections();
 
   for (let collection of collections) {
