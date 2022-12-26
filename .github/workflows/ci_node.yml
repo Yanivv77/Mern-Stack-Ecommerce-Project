@@ -14,8 +14,6 @@ jobs:
         node-version: [18.x]
         mongodb-version: ['6.0']
         
-        
-
 
     steps:
     - name: Git checkout
@@ -27,14 +25,14 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
         dotenv: .env
+      
         
-
     - name: Start MongoDB
       uses: supercharge/mongodb-github-action@1.8.0
       with:
         mongodb-version: ${{ matrix.mongodb-version }}
+        dotenv: .env
 
 
     - run: npm install
