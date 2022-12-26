@@ -8,6 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
+    max-parallel: 24
       matrix:
         node-version: [18.x]
     steps:
