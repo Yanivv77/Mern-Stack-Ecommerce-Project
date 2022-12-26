@@ -50,11 +50,14 @@ if (process.env.NODE_ENV === 'production') {
 app.use(notFound)
 app.use(errorHandler)
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT;
 
-app.listen(PORT, () => {
-  logger.info("Server started");
-  console.log(colors.blue(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`
-    ))
-})
+const server = app.listen(PORT, () => {
+  logger.info(`Server running on port ${PORT}`);
+});
+
+server.on('error', (error) => {
+  logger.error(`Error starting server: ${error.message}`);
+});
+
+export default app

@@ -17,3 +17,223 @@
 2022-12-25T20:25:20.508Z info: Server started  
 2022-12-25T20:25:22.049Z info: Connected to MongoDb  
 2022-12-25T20:25:47.868Z info: Moshe cohen has logged in  
+2022-12-26T07:31:28.947Z info: Server started  
+2022-12-26T07:31:30.611Z info: Connected to MongoDb  
+2022-12-26T07:58:23.700Z info: Server started  
+2022-12-26T07:58:25.403Z info: Connected to MongoDb  
+2022-12-26T08:03:00.019Z info: Server started  
+2022-12-26T08:03:01.700Z info: Connected to MongoDb  
+2022-12-26T08:04:14.080Z info: Server started  
+2022-12-26T08:04:15.593Z info: Connected to MongoDb  
+2022-12-26T08:12:49.692Z info: Server started  
+2022-12-26T08:12:51.375Z info: Connected to MongoDb  
+2022-12-26T08:12:51.982Z info: Test User has logged in  
+2022-12-26T08:14:31.927Z info: Server started  
+2022-12-26T08:14:33.476Z info: Connected to MongoDb  
+2022-12-26T08:15:42.769Z info: Server started  
+2022-12-26T08:15:44.301Z info: Connected to MongoDb  
+2022-12-26T08:15:44.694Z info: Test User has logged in  
+2022-12-26T08:17:12.405Z info: Server started  
+2022-12-26T08:17:13.963Z info: Connected to MongoDb  
+2022-12-26T08:17:14.343Z info: Test User has logged in  
+2022-12-26T08:19:18.160Z info: Server started  
+2022-12-26T08:19:19.545Z info: Connected to MongoDb  
+2022-12-26T08:19:19.940Z info: Test User has logged in  
+2022-12-26T08:21:14.474Z info: Server started  
+2022-12-26T08:21:15.840Z info: Connected to MongoDb  
+2022-12-26T08:21:16.180Z info: Test User has logged in  
+2022-12-26T08:21:48.082Z info: Server started  
+2022-12-26T08:21:49.627Z info: Connected to MongoDb  
+2022-12-26T08:21:49.997Z info: Test User has logged in  
+2022-12-26T08:27:21.152Z info: Server started  
+2022-12-26T08:27:22.623Z info: Connected to MongoDb  
+2022-12-26T08:27:22.636Z info: Connected to MongoDb  
+2022-12-26T08:27:23.035Z info: Test User has logged in  
+2022-12-26T08:29:05.226Z info: Server started  
+2022-12-26T08:29:06.670Z info: Connected to MongoDb  
+2022-12-26T08:29:07.038Z info: Test User has logged in  
+2022-12-26T08:29:07.073Z info: Connected to MongoDb  
+2022-12-26T08:38:51.762Z info: Server started  
+2022-12-26T08:38:53.791Z info: Connected to MongoDb  
+2022-12-26T08:38:53.864Z info: Connected to MongoDb  
+2022-12-26T08:38:54.275Z info: Test User has logged in  
+2022-12-26T08:41:14.140Z info: Server started  
+2022-12-26T08:41:15.908Z info: Connected to MongoDb  
+2022-12-26T08:41:19.091Z info: Connected to MongoDb  
+2022-12-26T08:41:19.486Z info: Test User has logged in  
+2022-12-26T08:43:12.457Z info: Connected to MongoDb  
+2022-12-26T08:43:15.337Z info: Connected to MongoDb  
+2022-12-26T08:43:15.691Z info: Test User has logged in  
+2022-12-26T08:48:44.893Z info: Connected to MongoDb  
+2022-12-26T08:48:49.012Z info: Connected to MongoDb  
+2022-12-26T08:48:49.627Z info: Test User has logged in  
+2022-12-26T08:49:04.785Z info: Connected to MongoDb  
+2022-12-26T08:49:05.280Z info: Test User has logged in  
+2022-12-26T08:49:11.431Z info: Connected to MongoDb  
+2022-12-26T08:49:11.927Z info: Test User has logged in  
+2022-12-26T08:50:04.415Z info: Connected to MongoDb  
+2022-12-26T08:50:04.831Z info: Test User has logged in  
+2022-12-26T08:50:34.828Z info: Server started  
+2022-12-26T08:50:36.722Z info: Connected to MongoDb  
+2022-12-26T08:50:37.236Z info: Test User has logged in  
+2022-12-26T08:50:41.427Z info: Connected to MongoDb  
+2022-12-26T08:52:28.489Z info: Connected to MongoDb  
+2022-12-26T08:52:31.358Z info: Connected to MongoDb  
+2022-12-26T08:52:31.722Z info: Test User has logged in  
+2022-12-26T08:53:27.428Z info: Connected to MongoDb  
+2022-12-26T08:53:30.299Z info: Connected to MongoDb  
+2022-12-26T08:53:30.724Z info: Test User has logged in  
+2022-12-26T08:54:01.875Z info: Connected to MongoDb  
+2022-12-26T08:54:04.710Z info: Connected to MongoDb  
+2022-12-26T08:54:05.060Z info: Test User has logged in  
+2022-12-26T08:55:14.039Z info: Connected to MongoDb  
+2022-12-26T08:55:17.228Z info: Connected to MongoDb  
+2022-12-26T08:55:17.592Z info: Test User has logged in  
+2022-12-26T08:56:39.420Z info: Connected to MongoDb  
+2022-12-26T08:56:42.432Z info: Connected to MongoDb  
+2022-12-26T08:56:42.811Z info: Test User has logged in  
+2022-12-26T08:57:29.071Z info: Connected to MongoDb  
+2022-12-26T08:57:31.913Z info: Connected to MongoDb  
+2022-12-26T08:57:32.279Z info: Test User has logged in  
+2022-12-26T09:03:01.208Z info: Server started  
+2022-12-26T09:03:03.017Z info: Connected to MongoDb  
+2022-12-26T09:03:05.789Z info: Connected to MongoDb  
+2022-12-26T09:03:06.221Z info: Test User has logged in  
+2022-12-26T09:03:16.431Z info: Connected to MongoDb  
+2022-12-26T09:03:20.642Z info: Connected to MongoDb  
+2022-12-26T09:03:21.139Z info: Test User has logged in  
+2022-12-26T09:14:21.419Z info: Connected to MongoDb  
+2022-12-26T09:14:21.775Z info: Test User has logged in  
+2022-12-26T09:14:41.144Z info: Connected to MongoDb  
+2022-12-26T09:14:41.529Z info: Test User has logged in  
+2022-12-26T09:14:44.507Z info: Connected to MongoDb  
+2022-12-26T09:16:11.745Z info: Server started  
+2022-12-26T09:16:13.376Z info: Connected to MongoDb  
+2022-12-26T09:16:19.230Z info: Connected to MongoDb  
+2022-12-26T09:16:19.598Z info: Test User has logged in  
+2022-12-26T09:18:19.281Z info: Connected to MongoDb  
+2022-12-26T09:18:25.907Z info: Connected to MongoDb  
+2022-12-26T09:18:26.263Z info: Test User has logged in  
+2022-12-26T09:18:46.445Z info: Connected to MongoDb  
+2022-12-26T09:18:49.337Z info: Connected to MongoDb  
+2022-12-26T09:18:49.743Z info: Test User has logged in  
+2022-12-26T09:23:51.099Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:23:52.417Z info: Connected to MongoDb  
+2022-12-26T09:24:12.584Z info: Server running on port 5000  
+2022-12-26T09:24:14.168Z info: Connected to MongoDb  
+2022-12-26T09:24:16.878Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:24:18.260Z info: Connected to MongoDb  
+2022-12-26T09:24:18.600Z info: Test User has logged in  
+2022-12-26T09:25:11.249Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:25:12.566Z info: Connected to MongoDb  
+2022-12-26T09:25:14.091Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:25:15.478Z info: Connected to MongoDb  
+2022-12-26T09:25:15.849Z info: Test User has logged in  
+2022-12-26T09:25:18.343Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:25:20.115Z info: Connected to MongoDb  
+2022-12-26T09:25:21.645Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:25:23.014Z info: Connected to MongoDb  
+2022-12-26T09:25:23.396Z info: Test User has logged in  
+2022-12-26T09:25:44.764Z info: Server running on port 5000  
+2022-12-26T09:25:46.425Z info: Connected to MongoDb  
+2022-12-26T09:25:48.870Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:25:50.284Z info: Connected to MongoDb  
+2022-12-26T09:25:50.768Z info: Test User has logged in  
+2022-12-26T09:26:05.568Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:26:06.879Z info: Connected to MongoDb  
+2022-12-26T09:26:08.426Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:26:09.730Z info: Connected to MongoDb  
+2022-12-26T09:26:10.087Z info: Test User has logged in  
+2022-12-26T09:26:26.844Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:26:28.140Z info: Connected to MongoDb  
+2022-12-26T09:26:29.872Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:26:31.136Z info: Connected to MongoDb  
+2022-12-26T09:26:31.497Z info: Test User has logged in  
+2022-12-26T09:29:25.248Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:29:26.611Z info: Connected to MongoDb  
+2022-12-26T09:29:28.171Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:29:29.500Z info: Connected to MongoDb  
+2022-12-26T09:29:29.870Z info: Test User has logged in  
+2022-12-26T09:29:50.241Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:29:51.578Z info: Connected to MongoDb  
+2022-12-26T09:29:51.949Z info: Test User has logged in  
+2022-12-26T09:31:44.463Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:31:45.860Z info: Connected to MongoDb  
+2022-12-26T09:31:46.232Z info: Test User has logged in  
+2022-12-26T09:31:47.554Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:31:49.260Z info: Connected to MongoDb  
+2022-12-26T09:32:45.199Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:32:46.764Z info: Connected to MongoDb  
+2022-12-26T09:32:47.259Z info: Test User has logged in  
+2022-12-26T09:33:59.317Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:34:01.003Z info: Connected to MongoDb  
+2022-12-26T09:34:01.357Z info: Test User has logged in  
+2022-12-26T09:35:30.032Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:35:31.860Z info: Connected to MongoDb  
+2022-12-26T09:35:32.243Z info: Test User has logged in  
+2022-12-26T09:35:44.231Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:35:46.053Z info: Connected to MongoDb  
+2022-12-26T09:35:46.587Z info: Test User has logged in  
+2022-12-26T09:36:15.408Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:36:17.440Z info: Connected to MongoDb  
+2022-12-26T09:36:17.944Z info: Test User has logged in  
+2022-12-26T09:36:23.595Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:36:25.528Z info: Connected to MongoDb  
+2022-12-26T09:36:26.094Z info: Test User has logged in  
+2022-12-26T09:36:31.734Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:36:33.315Z info: Connected to MongoDb  
+2022-12-26T09:36:33.855Z info: Test User has logged in  
+2022-12-26T09:36:40.783Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:36:42.372Z info: Connected to MongoDb  
+2022-12-26T09:36:42.860Z info: Test User has logged in  
+2022-12-26T09:36:49.297Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:36:51.161Z info: Connected to MongoDb  
+2022-12-26T09:36:51.656Z info: Test User has logged in  
+2022-12-26T09:37:07.182Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:37:08.673Z info: Connected to MongoDb  
+2022-12-26T09:37:09.081Z info: Test User has logged in  
+2022-12-26T09:38:20.719Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:38:22.754Z info: Connected to MongoDb  
+2022-12-26T09:38:23.243Z info: Test User has logged in  
+2022-12-26T09:38:32.966Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:38:34.485Z info: Connected to MongoDb  
+2022-12-26T09:38:34.846Z info: Test User has logged in  
+2022-12-26T09:38:38.444Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:38:39.937Z info: Connected to MongoDb  
+2022-12-26T09:39:14.999Z info: Server running on port 5000  
+2022-12-26T09:39:17.503Z info: Connected to MongoDb  
+2022-12-26T09:39:19.087Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:39:20.419Z info: Connected to MongoDb  
+2022-12-26T09:39:20.779Z info: Test User has logged in  
+2022-12-26T09:39:33.708Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:39:35.170Z info: Connected to MongoDb  
+2022-12-26T09:39:37.811Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:39:39.338Z info: Connected to MongoDb  
+2022-12-26T09:39:39.826Z info: Test User has logged in  
+2022-12-26T09:39:51.588Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:39:53.038Z info: Connected to MongoDb  
+2022-12-26T09:39:56.090Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:40:26.751Z info: Server running on port 5000  
+2022-12-26T09:40:28.509Z info: Connected to MongoDb  
+2022-12-26T09:40:30.389Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:40:35.410Z info: Connected to MongoDb  
+2022-12-26T09:40:35.795Z info: Test User has logged in  
+2022-12-26T09:40:57.148Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:40:58.502Z info: Connected to MongoDb  
+2022-12-26T09:40:58.888Z info: Test User has logged in  
+2022-12-26T09:41:00.108Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:41:01.489Z info: Connected to MongoDb  
+2022-12-26T09:41:11.806Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:41:13.320Z info: Connected to MongoDb  
+2022-12-26T09:41:13.699Z info: Test User has logged in  
+2022-12-26T09:41:15.121Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:41:16.504Z info: Connected to MongoDb  
+2022-12-26T09:41:22.153Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:41:23.510Z info: Connected to MongoDb  
+2022-12-26T09:41:23.896Z info: Test User has logged in  
+2022-12-26T09:41:25.041Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:41:26.339Z info: Connected to MongoDb  
+2022-12-26T09:41:31.275Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
+2022-12-26T09:41:33.044Z info: Connected to MongoDb  
+2022-12-26T09:41:33.551Z info: Test User has logged in  
+2022-12-26T09:41:35.670Z error: Error starting server: listen EADDRINUSE: address already in use :::5000  
