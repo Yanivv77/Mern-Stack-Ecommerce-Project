@@ -1,7 +1,7 @@
 import request from 'supertest';
 import app from '../../server';
 
-// describe('POST /api/users/login', () => {
+describe('POST /api/users/login', () => {
 //     it('returns a 200 and a token on successful login', async () => {
 //        await request(app)
 //       .post('/api/users')
