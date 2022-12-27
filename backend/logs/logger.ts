@@ -21,7 +21,7 @@ const customFormat = winston.format.combine(
     format: customFormat,
     transports: [
       new winston.transports.MongoDB({
-        db: url,
+        db: "mongodb+srv://Yanivv77:Yanivv77@yanivcluster.sziq4.mongodb.net/?retryWrites=true&w=majority",
         collection: 'logs',
       }),
       new winston.transports.File({
