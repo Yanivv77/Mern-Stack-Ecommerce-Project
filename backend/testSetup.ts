@@ -1,12 +1,12 @@
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
-import  app  from '../server';
+import  app  from './server';
 import request from 'supertest';
 
 
-declare global {
-  var login: () => Promise<string[]>;
-}
+// declare global {
+//   var login: () => Promise<string[]>;
+// }
 
 let mongo: any;
 beforeAll(async () => {
@@ -34,23 +34,23 @@ afterAll(async () => {
 });
 
 
-global.login = async () => {
-  const username = 'test';
-  const email = 'test@test.com';
-  const password = 'password';
-  const age = 14;
+// global.login = async () => {
+//   const username = 'test';
+//   const email = 'test@test.com';
+//   const password = 'password';
+//   const age = 14;
 
-  const response = await request(app)
-    .post('/api/users/signup')
-    .send({
-      username,
-      email,
-      password,
-      age
-    })
-    .expect(201);
+//   const response = await request(app)
+//     .post('/api/users/signup')
+//     .send({
+//       username,
+//       email,
+//       password,
+//       age
+//     })
+//     .expect(201);
 
-  const cookie = response.get('Set-Cookie');
+//   const cookie = response.get('Set-Cookie');
 
-  return cookie;
-}
+//   return cookie;
+// }
