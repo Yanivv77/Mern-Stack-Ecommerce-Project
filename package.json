@@ -17,11 +17,12 @@
     "tsc": "tsc",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
-  
   "jest": {
     "preset": "ts-jest",
-    "testEnvironment": "node"
-    
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./backend/testSetup.ts"
+    ]
   },
   "repository": {
     "type": "git",

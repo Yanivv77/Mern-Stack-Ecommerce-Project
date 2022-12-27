@@ -21,6 +21,10 @@ describe('POST /api/users', () => {
 });
 
   it('returns a 400 on email already in use', async () => {
+    await request(app)
+    .post('/api/users')
+    .send({ name: 'TestUser', email: 'test@example.com', password: 'password' });
+
     const res = await request(app)
       .post('/api/users')
       .send({ name: 'TestUser', email: 'test@example.com', password: 'password' });

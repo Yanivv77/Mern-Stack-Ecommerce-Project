@@ -10,6 +10,7 @@ import request from 'supertest';
 
 let mongo: any;
 beforeAll(async () => {
+  await mongoose.connection.close();
   mongo = await MongoMemoryServer.create();
 
   process.env.JWT_KEY = 'a2sd2fj';

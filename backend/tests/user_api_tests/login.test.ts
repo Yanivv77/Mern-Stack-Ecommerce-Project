@@ -3,9 +3,13 @@ import app from '../../server';
 
 describe('POST /api/users/login', () => {
     it('returns a 200 and a token on successful login', async () => {
+       await request(app)
+      .post('/api/users')
+      .send({ name: 'Testuseryyy', email: 'testyyy@example.com', password: 'password' });
+
       const res = await request(app)
         .post('/api/users/login')
-        .send({ email: 'test@example.com', password: 'password' });
+        .send({ email: 'testyyy@example.com', password: 'password' });
   
       expect(res.status).toBe(200);
       expect(res.body).toHaveProperty('token');
