@@ -7,15 +7,12 @@ describe('POST /api/users', () => {
     const res = await request(app)
       .post('/api/users')
       .send({ name: 'Testuseryyy', email: 'testyyy@example.com', password: 'password' });
-
     expect(res.status).toBe(201);
     expect(res.body).toHaveProperty('name', 'Testuseryyy');
     expect(res.body).toHaveProperty('email', 'testyyy@example.com');
     expect(res.body).toHaveProperty('isAdmin', false);
     expect(res.body).toHaveProperty('token');
 
-    await User.deleteOne({ _id: res.body._id });
-    
   },20000);
 });
 

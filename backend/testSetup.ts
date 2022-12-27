@@ -13,7 +13,7 @@ beforeAll(async () => {
   await mongoose.connection.close();
   mongo = await MongoMemoryServer.create();
 
-  process.env.JWT_KEY = 'a2sd2fj';
+  process.env.JWT_SECRET = 'a2sd2fj';
   process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
   const uri = mongo.getUri();
