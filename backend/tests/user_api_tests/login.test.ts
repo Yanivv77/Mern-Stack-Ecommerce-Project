@@ -2,18 +2,18 @@ import request from 'supertest';
 import app from '../../server';
 
 describe('POST /api/users/login', () => {
-//     it('returns a 200 and a token on successful login', async () => {
-//        await request(app)
-//       .post('/api/users')
-//       .send({ name: 'test', email: 'testtest@example.com', password: 'password' });
+    // it('returns a 200 and a token on successful login', async () => {
+    //    await request(app)
+    //   .post('/api/users')
+    //   .send({ name: 'test', email: 'testtest@example.com', password: 'password' });
 
-//       const res = await request(app)
-//         .post('/api/users/login')
-//         .send({ email: 'testtest@example.com', password: 'password' });
+    //   const res = await request(app)
+    //     .post('/api/users/login')
+    //     .send({ email: 'testtest@example.com', password: 'password' });
   
-//       expect(res.status).toBe(200);
+    //   expect(res.status).toBe(200);
       
-//     },20000);
+    // },20000);
   
     it('returns a 401 on invalid email', async () => {
       const res = await request(app)
