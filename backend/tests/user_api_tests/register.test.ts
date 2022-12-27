@@ -9,7 +9,6 @@ describe('POST /api/users', () => {
       .send({ name: 'Testuseryyy', email: 'testyyy@example.com', password: 'password' });
 
     expect(res.status).toBe(201);
-    expect(res.body).toHaveProperty('_id');
     expect(res.body).toHaveProperty('name', 'Testuseryyy');
     expect(res.body).toHaveProperty('email', 'testyyy@example.com');
     expect(res.body).toHaveProperty('isAdmin', false);
@@ -21,9 +20,9 @@ describe('POST /api/users', () => {
 });
 
   it('returns a 400 on email already in use', async () => {
-    await request(app)
-    .post('/api/users')
-    .send({ name: 'TestUser', email: 'test@example.com', password: 'password' });
+await request(app)
+      .post('/api/users')
+      .send({ name: 'TestUser', email: 'test@example.com', password: 'password' });
 
     const res = await request(app)
       .post('/api/users')
