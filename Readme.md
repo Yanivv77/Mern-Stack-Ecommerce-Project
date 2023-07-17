@@ -1,10 +1,8 @@
 
-### heroku link
+### h link
 
-https://yanivmernshop.herokuapp.com/
+https://mern-stack-ecommerce-project.onrender.com/
 
-
-# Usage
 
 ## Features
 
@@ -22,7 +20,7 @@ https://yanivmernshop.herokuapp.com/
 - PayPal / credit card integration
 - Database seeder (products & users)
 
-
+# Usage
 
 ### Env Variables
 
