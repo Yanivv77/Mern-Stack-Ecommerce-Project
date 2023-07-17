@@ -1,7 +1,5 @@
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
-import  app  from './server';
-import request from 'supertest';
 
 
 // declare global {
