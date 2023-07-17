@@ -15,7 +15,8 @@
     "data:destroy": "node backend/seeder -d",
     "test": "jest --watchAll --no-cache",
     "tsc": "tsc",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
   },
   "jest": {
     "preset": "ts-jest",
